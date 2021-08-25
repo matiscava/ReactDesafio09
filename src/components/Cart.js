@@ -1,19 +1,22 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import ItemCarrito from './ItemCarrito';
+import { CartContext } from "../context/cartContext";
 
-let Carrito = [];
-let carritoCargado = localStorage.getItem('productosCarrito');
-console.log(JSON.parse(carritoCargado))
-Carrito.push(JSON.parse(carritoCargado));
-console.log(Carrito)
 
 
 const Cart = () => {
+    const [cart, setCart] = useContext(CartContext);
+    const vaciarCart = () => {
+        setCart([]);
+    
+    }
     return(
         <div>
             <h3>Tu Carrito:</h3>
             <div className='ContenedorCarrito'>
-                {Carrito[0].map(producto=>(
+            {cart.length !==0 && <div className='ItemDetalleBtn ItemDetalleBtn--Volver' onClick={()=>vaciarCart()} >Vaciar Carrito</div>}
+                {cart.length===0 ? <p>El Carrito está vacio</p> : 
+                cart.map(producto=>(
                     <ItemCarrito 
                         img={producto.imgURL}
                         alt={producto.alt}

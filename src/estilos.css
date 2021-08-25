@@ -60,6 +60,14 @@ header{
     transition: 0.5s;
     font-size: 20px;
 }
+.spanItemCarrito{
+    background: #9dff00;
+    padding: 1px 4px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: black;
+}
 
 .NavBarSpan:hover, .navLinkActivo .NavBarSpan{
     color: yellow;
@@ -298,6 +306,9 @@ header{
     margin: 20px auto;
     box-shadow: 0 0 7px 5px rgba(136, 95, 95, 0.65);
 }
+.contendorItemCarritoInformacion{
+    width: calc(100%-140px);
+}
 .contendorImgItemCarrito{
     width: 130px; 
     margin: 10px
@@ -334,4 +345,14 @@ header{
 .ItemCarritoCantidad{
     font-size: 15px;
     color: #c3b5b5;
+}
+.contenedorItemCarritoEditores{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px
+}
+.itemCarritoEditor{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }

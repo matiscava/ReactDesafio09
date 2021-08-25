@@ -1,21 +1,18 @@
 import React from "react";
-// import ListItems from "./ListItems";
+import { CartProvider } from "../context/cartContext";
 import Router from "../router/router";
-// import NavBar from "./NavBar";
 
 
-class App extends React.Component{
-    render(){
-        return (
-            <div>
-                {/* <NavBar /> */}
+const App =()=>{
+    
+    return (
+        <div>
+            <CartProvider>
                 <Router />
-                {/* <ListItems>
-                    
-                </ListItems> */}
-            </div>
-        )
-    }
+            </CartProvider>
+        </div>
+    )
+    
 }
 
 export default App;
